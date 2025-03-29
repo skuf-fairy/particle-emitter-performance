@@ -1,0 +1,32 @@
+{
+  "name": "particle-emitter-performance",
+  "version": "0.0.0",
+  "description": "test-performance",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./build && npx tsc",
+    "test-performance": "npm run build && node ./build/index",
+    "dev": "npx nodemon"
+  },
+  "author": "skuf-fairy",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
+    "eslint": "8.37.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "lint-staged": "13.2.0",
+    "prettier": "2.8.7",
+    "typescript": "5.2.2"
+  },
+  "dependencies": {
+    "@barvynkoa/particle-emitter": "0.0.1",
+    "@types/node": "22.13.14",
+    "chalk": "5.4.1",
+    "nodemon": "3.1.9",
+    "particle-flux": "0.4.5",
+    "pixi.js": "8.9.1",
+    "rimraf": "6.0.1",
+    "tsx": "4.19.3"
+  }
+}
