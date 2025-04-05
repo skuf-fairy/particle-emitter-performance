@@ -24,7 +24,7 @@
     "@types/node": "22.13.14",
     "chalk": "5.4.1",
     "nodemon": "3.1.9",
-    "particle-flux": "0.4.5",
+    "particle-flux": "0.4.19",
     "pixi.js": "8.9.1",
     "rimraf": "6.0.1",
     "tsx": "4.19.3"

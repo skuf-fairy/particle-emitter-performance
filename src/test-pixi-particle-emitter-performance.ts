@@ -1,5 +1,5 @@
 import {Emitter} from '@barvynkoa/particle-emitter';
-import {Container} from 'pixi.js';
+import {Container, Texture} from 'pixi.js';
 
 export function testPixiParticleEmitterPerformance() {
   const emitter = new Emitter(new Container(), {
@@ -17,6 +17,12 @@ export function testPixiParticleEmitterPerformance() {
     },
     addAtBack: false,
     behaviors: [
+      {
+        type: 'textureSingle',
+        config: {
+          texture: Texture.EMPTY,
+        },
+      },
       {
         type: 'moveSpeedStatic',
         config: {

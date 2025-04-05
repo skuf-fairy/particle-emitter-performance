@@ -1,6 +1,6 @@
 export function measureFuncExecuteTime(fn: VoidFunction, runs = 100, trimPercentage = 10) {
   // прогрев перед основным тестом
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 1000; i++) {
     fn();
   }
 

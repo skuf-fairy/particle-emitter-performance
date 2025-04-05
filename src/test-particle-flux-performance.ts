@@ -1,7 +1,8 @@
 import {ParticleEmitter, Point2d, ViewContainer, ViewParticle} from 'particle-flux';
 
 class TestViewParticle implements ViewParticle {
-  position: Point2d = {x: 0, y: 0};
+  x: number = 0;
+  y: number = 0;
   scale: Point2d = {x: 1, y: 1};
   alpha: number = 1;
   tint: string | number = 0xffffff;
@@ -31,6 +32,7 @@ export function testParticleFluxPerformance() {
   const emitter = new ParticleEmitter(new TestViewContainer(), () => new TestViewParticle(), {
     emitterConfig: {
       autoStart: false,
+      maxParticles: 100000,
     },
     particleConfig: {
       lifeTime: {
@@ -43,9 +45,9 @@ export function testParticleFluxPerformance() {
         minAngle: 0,
         maxAngle: 360,
       },
-      alpha: {
-        value: 0.5,
-      },
+      // alpha: {
+      //   value: 0.5,
+      // },
     },
   });
 
